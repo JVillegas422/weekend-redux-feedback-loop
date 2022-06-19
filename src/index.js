@@ -34,12 +34,21 @@ const supported = (state = [], action) => {
     return state;
 }
 
+const understandingContent = (state = [], action) => {
+    switch (action.type) {
+        case 'ADD_UNDERSTANDING':
+            return action.payload
+    }
+    return state;
+}
+
 // Redux Store
 const storeInstance = createStore(
     combineReducers({
         commentsInfo,
         feelings,
         supported,
+        understandingContent,
     }),
     applyMiddleware(logger)
 );
