@@ -23,6 +23,15 @@ const feelings = (state = [], action) => {
         case 'ADD_FEELINGS':
             return action.payload
     }
+    return state;
+}
+
+const supported = (state = [], action) => {
+    switch (action.type) {
+        case 'ADD_SUPPORTED':
+            return action.payload
+    }
+    return state;
 }
 
 // Redux Store
@@ -30,6 +39,7 @@ const storeInstance = createStore(
     combineReducers({
         commentsInfo,
         feelings,
+        supported,
     }),
     applyMiddleware(logger)
 );
