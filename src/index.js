@@ -19,7 +19,10 @@ const commentsInfo = (state = [], action) => {
 }
 
 const feelings = (state = [], action) => {
-    // Update after working on feelingsForm
+    switch (action.type) {
+        case 'ADD_FEELINGS':
+            return action.payload
+    }
 }
 
 // Redux Store

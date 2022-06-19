@@ -11,7 +11,7 @@ function FeelingForm() {
     const handleSubmit = (evt) => {
         evt.preventDefault();
         dispatch({
-            type: 'ADD_FEELING_FORM',
+            type: 'ADD_FEELINGS',
             payload: feelingForm,
         })
         history.push('/feelings');
