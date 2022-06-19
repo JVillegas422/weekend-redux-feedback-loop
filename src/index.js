@@ -43,7 +43,7 @@ const understandingContent = (state = [], action) => {
 }
 
 // Redux Store
-const storeInstance = createStore(
+const store = createStore(
     combineReducers({
         commentsInfo,
         feelings,
@@ -54,7 +54,7 @@ const storeInstance = createStore(
 );
 
 ReactDOM.render(
-<Provider> 
+<Provider store={store}> 
     <App />
 </Provider>, 
 document.getElementById('root'));
