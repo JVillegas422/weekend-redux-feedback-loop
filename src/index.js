@@ -11,16 +11,29 @@ import logger from 'redux-logger';
 
 // Reducers
 const commentsInfo = (state = [], action) => {
-    // Update after working on Commentsform
+    switch (action.type) {
+        case 'ADD_COMMENTS':
+            return action.payload
+    }
+    return state;
+}
+
+const feelings = (state = [], action) => {
+    // Update after working on feelingsForm
 }
 
 // Redux Store
 const storeInstance = createStore(
     combineReducers({
         commentsInfo,
+        feelings,
     }),
     applyMiddleware(logger)
 );
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+<Provider> 
+    <App />
+</Provider>, 
+document.getElementById('root'));
 registerServiceWorker();

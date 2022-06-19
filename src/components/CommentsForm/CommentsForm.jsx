@@ -14,7 +14,7 @@ function CommentsForm() {
             type: 'ADD_COMMENTS',
             payload: commentsForm,
         })
-
+        history.push('/displayComments');
     };
 
     return (
@@ -26,7 +26,7 @@ function CommentsForm() {
                     placeholder='Add Comments Here'
                     value={commentsForm}
                 />
-                <button>Next</button>
+                <button type='submit'>Next</button>
             </form>
         </>
     )
