@@ -8,8 +8,26 @@ function CommentsForm() {
     const history = useHistory();
     const [commentsForm, setCommentsForm] = useState('');
 
+    const handleSubmit = (evt) => {
+        evt.preventDefault();
+        dispatch({
+            type: 'ADD_COMMENTS',
+            payload: commentsForm,
+        })
+
+    };
+
     return (
         <>
+            <form onSubmit={(evt) => handleSubmit(evt)}>
+                <input 
+                    onChange={evt => setCommentsForm(evt.target.value)}
+                    type='text'
+                    placeholder='Add Comments Here'
+                    value={commentsForm}
+                />
+                <button>Next</button>
+            </form>
         </>
     )
 }
