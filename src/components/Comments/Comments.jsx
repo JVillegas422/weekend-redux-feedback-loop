@@ -1,30 +1,30 @@
-import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
-function CommentsForm() {
+function Comments() {
 
     const dispatch = useDispatch();
     const history = useHistory();
-    const [commentsForm, setCommentsForm] = useState('');
+    const [comments, setComments] = useState('');
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
         dispatch({
             type: 'ADD_COMMENTS',
-            payload: commentsForm,
+            payload: comments,
         })
-        history.push('/displayComments');
+        history.push('/4');
     };
 
     return (
         <>
+            <h3>Any comments you want to leave?</h3>
             <form onSubmit={(evt) => handleSubmit(evt)}>
                 <input 
-                    onChange={evt => setCommentsForm(evt.target.value)}
+                    onChange={evt => setComments(evt.target.value)}
                     type='text'
                     placeholder='Add Comments Here'
-                    value={commentsForm}
+                    value={comments}
                 />
                 <button type='submit'>Next</button>
             </form>
@@ -32,4 +32,4 @@ function CommentsForm() {
     )
 }
 
-export default CommentsForm;
+export default Comments;

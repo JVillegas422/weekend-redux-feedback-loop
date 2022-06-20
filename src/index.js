@@ -10,10 +10,12 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 // Reducers
-const commentsInfo = (state = [], action) => {
+const comments = (state = [], action) => {
     switch (action.type) {
         case 'ADD_COMMENTS':
             return action.payload
+        case 'RESET_VALUES':
+            return state = []
     }
     return state;
 }
@@ -22,6 +24,8 @@ const feelings = (state = [], action) => {
     switch (action.type) {
         case 'ADD_FEELINGS':
             return action.payload
+        case 'RESET_VALUES':
+            return state = []
     }
     return state;
 }
@@ -30,14 +34,18 @@ const supported = (state = [], action) => {
     switch (action.type) {
         case 'ADD_SUPPORTED':
             return action.payload
+        case 'RESET_VALUES':
+            return state = []
     }
     return state;
 }
 
-const understandingContent = (state = [], action) => {
+const understanding = (state = [], action) => {
     switch (action.type) {
         case 'ADD_UNDERSTANDING':
             return action.payload
+        case 'RESET_VALUES':
+            return state = []
     }
     return state;
 }
@@ -45,10 +53,10 @@ const understandingContent = (state = [], action) => {
 // Redux Store
 const store = createStore(
     combineReducers({
-        commentsInfo,
+        comments,
         feelings,
         supported,
-        understandingContent,
+        understanding,
     }),
     applyMiddleware(logger)
 );

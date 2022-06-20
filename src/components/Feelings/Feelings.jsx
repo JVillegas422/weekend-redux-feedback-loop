@@ -1,20 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
-function FeelingForm() {
+function Feelings() {
     
     const dispatch = useDispatch();
     const history = useHistory();
-    const [feelingForm, setFeelingForm] = useState('');
+    const [feeling, setFeeling] = useState('');
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
         dispatch({
             type: 'ADD_FEELINGS',
-            payload: feelingForm,
+            payload: feeling,
         })
-        history.push('/feelings');
+        history.push('/1');
     };
 
 
@@ -23,12 +23,12 @@ function FeelingForm() {
             <h3>How are you feeling today?</h3>
             <form onSubmit={(evt) => handleSubmit(evt)}>
                 <input 
-                    onChange={evt => setFeelingForm(Number(evt.target.value))}
+                    onChange={evt => setFeeling(Number(evt.target.value))}
                     type='range'
                     min='0'
                     max='5'
                     placeholder='Feeling?'
-                    value={feelingForm}
+                    value={feeling}
                 />
                 <button type='submit'>Next</button>
             </form>
@@ -36,4 +36,4 @@ function FeelingForm() {
     )
 }
 
-export default FeelingForm;
+export default Feelings;

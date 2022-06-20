@@ -5,10 +5,10 @@ import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 // Import Components
-import CommentsForm from '../CommentsForm/CommentsForm';
-import FeelingForm from '../FeelingForm/FeelingForm';
-import SupportForm from '../SupportForm/SupportForm';
-import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
+import Comments from '../Comments/Comments';
+import Feelings from '../Feelings/Feelings';
+import Support from '../Support/Support';
+import Understanding from '../Understanding/Understanding';
 
 function App() {
 
@@ -20,20 +20,24 @@ function App() {
       </header>
 
       <Router>
-        <Route exact path='/displayComments'>
-          <CommentsForm />
+        <Route exact path='/'>
+          <Feelings />
         </Route>
 
-        <Route exact path='/feelings'>
-          <FeelingForm />
+        <Route exact path='/1'>
+          <Understanding />
         </Route>
 
-        <Route exact path='/supported'>
-          <SupportForm />
+        <Route exact path='/2'>
+          <Support />
         </Route>
 
-        <Route exact path='/understanding'>
-          <UnderstandingForm />
+        <Route exact path='/3'>
+          <Comments />
+        </Route>
+
+        <Route exact path='/4'>
+          {/* <FeedbackReview /> */}
         </Route>
 
       </Router>

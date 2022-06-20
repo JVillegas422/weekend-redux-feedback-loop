@@ -2,33 +2,33 @@ import { useState } from 'react';
 import { useHistory, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
-function UnderstandingForm() {
+function Support() {
 
     const dispatch = useDispatch();
     const history = useHistory();
-    const [understanding, setUnderstanding] = useState('');
+    const [supported, setSupported] = useState('');
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
         dispatch({
-            type: 'ADD_UNDERSTANDING',
-            payload: understanding,
+            type: 'ADD_SUPPORTED',
+            payload: supported,
         })
-        history.push('/understanding');
+        history.push('/3');
     };
 
 
     return (
         <>
-            <h3>How well are you understanding the content?</h3>
+            <h3>How well are you being supported?</h3>
             <form onSubmit={(evt) => handleSubmit(evt)}>
                 <input 
-                    onChange={evt => setUnderstanding(Number(evt.target.value))}
+                    onChange={evt => setSupported(Number(evt.target.value))}
                     type='range'
                     min='0'
                     max='5'
                     placeholder='Feel Supported?'
-                    value={understanding}
+                    value={supported}
                 />
                 <button type='submit'>Next</button>
             </form>
@@ -36,4 +36,4 @@ function UnderstandingForm() {
     )
 }
 
-export default UnderstandingForm;
+export default Support;
