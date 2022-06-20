@@ -36,9 +36,9 @@ function App() {
           <Comments />
         </Route>
 
-        <Route exact path='/4'>
+        {/* <Route exact path='/4'> */}
           {/* <FeedbackReview /> */}
-        </Route>
+        {/* </Route> */}
 
       </Router>
     </div>
