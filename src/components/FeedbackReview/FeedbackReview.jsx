@@ -7,13 +7,12 @@ function ReviewFeedback() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-
     const comments = useSelector(store => store.comments);
     const feelings = useSelector(store => store.feelings);
     const supported = useSelector(store => store.supported);
     const understanding = useSelector(store => store.understanding);
 
-    const onSubmit = () => {
+    const feedbackReview = () => {
         axios.post('/feedback', {
             comments,
             feelings,
@@ -24,7 +23,7 @@ function ReviewFeedback() {
             dispatch({
                 type: 'RESET_VALUES'
             })
-            history.push('/1')
+            history.push('/HomePage')
         })
         .catch((err) => {
             console.log('err feedbackReview failed', err);
@@ -39,8 +38,7 @@ function ReviewFeedback() {
                 <p><Link to="/1">Understanding: </Link>{understanding}</p>
                 <p><Link to="/2">Supported:</Link> {supported}</p>
                 <p><Link to="/3">Comments:</Link> {comments}</p>
-
-            <button onClick={onSubmit}>
+            <button onClick={feedbackReview}>
                 Submit
             </button>
         </>

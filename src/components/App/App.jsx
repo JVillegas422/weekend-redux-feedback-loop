@@ -9,6 +9,8 @@ import Comments from '../Comments/Comments';
 import Feelings from '../Feelings/Feelings';
 import Support from '../Support/Support';
 import Understanding from '../Understanding/Understanding';
+import ReviewFeedback from '../FeedbackReview/FeedbackReview';
+import HomePage from '../HomePage/HomePage';
 
 function App() {
 
@@ -36,9 +38,13 @@ function App() {
           <Comments />
         </Route>
 
-        {/* <Route exact path='/4'> */}
-          {/* <FeedbackReview /> */}
-        {/* </Route> */}
+        <Route exact path='/4'>
+          <ReviewFeedback />
+        </Route>
+
+        <Route exact path='/HomePage'>
+          <HomePage />
+        </Route>
 
       </Router>
     </div>
