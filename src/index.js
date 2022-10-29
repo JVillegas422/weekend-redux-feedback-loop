@@ -9,13 +9,13 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
-// List of Reducers
-const feelings = (state = [], action) => {
+// Reducer for user input data
+const feedbackReducer = (state = { feeling: 0 }, action) => {
     switch (action.type) {
-        case 'SET_FEELINGS':
-            return action.payload;
+        case 'SET_FEELING':
+            return {...state, feeling: action.payload };
         case 'RESET_STATE':
-            return state = [];
+            return state;
     }
 
     return state;
@@ -25,7 +25,7 @@ const feelings = (state = [], action) => {
 // Redux Store
 const store = createStore(
     combineReducers({
-        feelings
+        feedbackReducer
     }),
     applyMiddleware(logger)
 );
