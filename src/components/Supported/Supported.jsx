@@ -8,7 +8,7 @@ function Supported() {
     const dispatch = useDispatch();
     const history = useHistory();
     // useSelector is for adding data to store
-    const supported = useSelector((store) => store.feedbackReducer);
+    const feedback = useSelector((store) => store.feedbackReducer);
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
