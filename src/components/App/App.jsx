@@ -12,7 +12,7 @@ function App() {
     <div className='App'>
     <Router>
 
-      <Route>
+      <Route path='/' exact>
         <HomePage />
       </Route>
 
