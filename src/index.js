@@ -15,6 +15,7 @@ const feedbackReducer = (
         feeling: 0,
         understanding: 0,
         supported: 0,
+        comments: ""
     }, 
     action) => {
     switch (action.type) {
@@ -24,6 +25,8 @@ const feedbackReducer = (
             return {...state, understanding: action.payload };
         case 'SET_SUPPORTED':
             return {...state, supported: action.payload };
+        case 'SET_COMMENTS':
+            return {...state, comments: action.payload };
         default:
             return state;
     }
