@@ -21,11 +21,31 @@ feedbackRouter.post('/', (req, res) => {
 
     pool.query(sqlQuery, sqlParams)
         .then((dbRes) => {
+            console.log('in POST feedbackrouter ', dbRes);
             res.sendStatus(201);
       })
       .catch((err) => {
+        console.log('GET feedbackrouter failed', err);
         res.sendStatus(500);
       });
+});
+
+// GET routes to load data
+feedbackRouter.get('/', (req, res) => {
+    const sqlQuery = `
+        SELECT * FROM "feedback"
+        ORDER BY "id" DESC;
+    `;
+
+    pool.query(sqlQuery)
+        .then((dbRes) => {
+            console.log('in GET feedbackrouter ', dbRes);
+            res.send(dbRes.rows);
+        })
+        .catch((err) => {
+            console.log('GET feedbackrouter failed', err);
+            res.sendStatus(500);
+        });
 });
 
 module.exports = feedbackRouter;
