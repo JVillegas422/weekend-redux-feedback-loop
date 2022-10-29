@@ -10,15 +10,22 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 // Reducer for user input data
-const feedbackReducer = (state = { feeling: 0 }, action) => {
+const feedbackReducer = (
+    state = { 
+        feeling: 0,
+        understanding: 0,
+    }, 
+    action) => {
     switch (action.type) {
         case 'SET_FEELING':
             return {...state, feeling: action.payload };
         case 'RESET_STATE':
             return state;
+        case 'SET_UNDERSTANDING':
+            return {...state, understanding: action.payload };
+        default:
+            return state;
     }
-
-    return state;
 }
 
 

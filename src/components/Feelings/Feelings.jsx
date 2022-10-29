@@ -33,7 +33,7 @@ function Feelings() {
                         onChange={(evt) =>
                             dispatch({
                                 type: 'SET_FEELING',
-                                payload: evt.target.value
+                                payload: evt.target.value,
                             })
                         }
                         type="number"
