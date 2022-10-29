@@ -19,8 +19,6 @@ const feedbackReducer = (
     switch (action.type) {
         case 'SET_FEELING':
             return {...state, feeling: action.payload };
-        case 'RESET_STATE':
-            return state;
         case 'SET_UNDERSTANDING':
             return {...state, understanding: action.payload };
         default:
@@ -38,7 +36,7 @@ const store = createStore(
 );
 
 ReactDOM.render(
-<Provider>
+<Provider store={store}>
     <App />
 </Provider>,
 document.getElementById('root'));
