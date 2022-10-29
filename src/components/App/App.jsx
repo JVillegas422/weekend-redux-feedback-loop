@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route } from 'react-router-dom';
+import HomePage from '../HomePage/HomePage';
 import Feelings from '../Feelings/Feelings';
 import Understanding from '../Understanding/Understanding';
 
@@ -11,9 +12,9 @@ function App() {
     <div className='App'>
     <Router>
 
-      {/* <Route>
+      <Route>
         <HomePage />
-      </Route> */}
+      </Route>
 
       <Route path='/1' exact>
         <Feelings />
