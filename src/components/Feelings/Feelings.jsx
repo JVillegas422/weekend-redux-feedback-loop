@@ -1,4 +1,5 @@
 // import { useState } from 'react';
+import Header from '../Header/Header';
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -24,6 +25,7 @@ function Feelings() {
 
     return (
         <>
+            <Header />
             <h2>How are you feeling today?</h2>
             <h3>Please add a number between 1 and 5.</h3>
             <p>1 being "not well.." and 5 being "Feel excellent!"</p>

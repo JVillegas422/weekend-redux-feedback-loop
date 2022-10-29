@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import Header from '../Header/Header';
 
 function Understanding() {
     console.log('in Understanding component');
@@ -22,6 +23,7 @@ function Understanding() {
 
     return (
         <>
+            <Header />
             <h2>How well do you understand the content?</h2>
             <h3>Please add a number between 1 and 5.</h3>
             <p>1 being "not well.." and 5 being "Feel excellent!"</p>
