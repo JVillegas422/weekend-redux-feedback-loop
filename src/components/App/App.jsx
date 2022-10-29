@@ -5,6 +5,7 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 import HomePage from '../HomePage/HomePage';
 import Feelings from '../Feelings/Feelings';
 import Understanding from '../Understanding/Understanding';
+import Supported from '../Supported/Supported';
 
 function App() {
 
@@ -24,6 +25,9 @@ function App() {
         <Understanding />
       </Route>
 
+      <Route path='/3' exact>
+        <Supported />
+      </Route>
 
     </Router>
 
