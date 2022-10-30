@@ -46,8 +46,8 @@ function Understanding() {
                             className='btn-neon'
                         >
                             Next
-                            <svg height="30" width="100">
-                                <polyline points="0,0 100,0 100,30 0,30 0,00">
+                            <svg height="40" width="125">
+                                <polyline points="0,0 125,0 125,40 0,40 0,00">
                                 </polyline>
                             </svg>
                         </button>
