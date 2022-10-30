@@ -41,7 +41,17 @@ function Supported() {
                         type="number"
                         required
                     />
-                    <button>Next Page</button>
+                    <div>
+                        <button
+                            className='btn-neon'
+                        >
+                            Next
+                            <svg height="30" width="100">
+                                <polyline points="0,0 100,0 100,30 0,30 0,00">
+                                </polyline>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
             </form>
