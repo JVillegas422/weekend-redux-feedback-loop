@@ -3,7 +3,15 @@ function Header() {
         <>
             <header className='App-header'>
                 <h1 className='App-title'>Feedback!</h1>
-                <h4>Don't forget it!</h4>
+                <div className="container">
+                    <div className="bars-common bar-one"></div>
+                    <div className="bars-common bar-two"></div>
+                    <div className="bars-common bar-three"></div>
+
+                    <div className="squares-common square-one"></div>
+                    <div className="squares-common square-two"></div>
+                    <div className="App-title">Don't forget it!</div>
+                </div>
             </header>
         </>
     );

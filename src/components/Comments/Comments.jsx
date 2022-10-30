@@ -16,8 +16,10 @@ function Comments() {
     return (
         <>
             <Header />
-            <h2>Any comments you want to leave?</h2>
-            <h4>Comments</h4>
+            <div className='changeFont'>
+                <h2>Any comments you want to leave?</h2>
+                <h4>Comments</h4>
+            </div>
             <form onSubmit={handleSubmit}>
                 <div>
                     <input
@@ -29,7 +31,17 @@ function Comments() {
                         }
                         type="text"
                     />
-                    <button>Next Page</button>
+                    <div>
+                        <button
+                            className='btn-neon'
+                        >
+                            Next
+                            <svg height="30" width="100">
+                                <polyline points="0,0 100,0 100,30 0,30 0,00">
+                                </polyline>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
             </form>

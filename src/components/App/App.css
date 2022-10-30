@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
 .App {
   text-align: center;
 }
 
 .App-header {
-  background-color: #033076;
-  min-height: 70px;
-  padding: 20px;
+  background-color: #052352;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
-  margin-bottom: 20px;
 }
 
 .App-title {
@@ -20,4 +26,123 @@
 
 h4 {
   font-style: italic;
+}
+
+.changeFont {
+  color: white;
+  font-family: 'Merienda', cursive;
+  font-size: 15px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Testing */
+
+.container{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 15px;
+  margin-top: -25px;
+}
+
+.App-title {
+  color: white;
+  opacity: .4;
+  font-size: 85px;
+  font-family: 'Island Moments', cursive;
+  display: inline;
+}
+
+.bars-common{
+  height: 4vw;
+  width: 1vw;
+  margin: auto;
+  position: absolute;
+  box-shadow: 0 0 0 0.1vw cyan, 0 0 1vw 0 cyan, inset 0 0 0.5vw 0 cyan;
+}
+
+.bar-one{
+  left: 0;
+  right: 4vw;
+  top: 0;
+  bottom:0;
+  animation: barAnim 1s .33s ease infinite;
+}
+
+.bar-two{
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom:0;
+  animation: barAnim 1s .66s ease infinite;
+}
+
+.bar-three{
+  left: 4vw;
+  right: 0;
+  top: 0;
+  bottom:0;
+  animation: barAnim 1s .99s ease infinite;
+}
+
+@keyframes barAnim{
+  0%,
+  100%{
+      box-shadow: 0 0 0 0.1vw cyan, 0 0 1vw 0 cyan, inset 0 0 0.5vw 0 cyan;
+  }
+  50%{
+      box-shadow: 0 0 0 0.1vw magenta, 0 0 1vw 0 magenta, inset 0 0 0.5vw 0 magenta;
+  }
+}
+
+.squares-common{
+  height: 8vw;
+  width: 8vw;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom:0;
+  box-shadow: 0 0 0 0.1vw cyan, 0 0 1vw 0 cyan, inset 0 0 0.5vw 0 cyan;
+}
+
+.square-one{
+  animation: squareOne 4s .99s ease infinite;
+}
+
+@keyframes  squareOne{
+  from{
+      transform: rotate(0deg);
+  }
+  to{
+      transform: rotate(-180deg);
+  }
+}
+
+.square-two{
+  animation: squareTwo 4s .99s ease infinite;
+}
+
+@keyframes  squareTwo{
+  from{
+      transform: rotate(0deg);
+  }
+  to{
+      transform: rotate(180deg);
+  }
 }

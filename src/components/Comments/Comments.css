@@ -1,0 +1,49 @@
+body {
+    background-color: #1e2129;
+}
+
+.btn-neon{
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    color: #f5f5f5;
+    background-color: #1e2129;
+    width: 100px;
+    transition: 1s;
+    transition-delay: .9s;
+    position: relative;
+    display: inline-block;
+    border: none;
+}
+
+.btn-neon:hover{
+    box-shadow: 0 0 10px #61dafb,
+                0 0 40px #61dafb,
+                0 0 80px #61dafb;
+    background-color: #61dafb;
+}
+
+.btn-neon:hover polyline{
+    stroke-dashoffset: -460;
+}
+
+.btn-neon svg{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+}
+
+.btn-neon svg polyline{
+    fill: transparent;
+    stroke: #61dafb;
+    stroke-width: 2px;
+    stroke-dasharray: 40 460;
+    stroke-dashoffset: 40;
+    transition:  .8s ease-in-out;
+}
