@@ -24,9 +24,11 @@ function Supported() {
     return (
         <>
             <Header />
-            <h2>How well are you being supported?</h2>
-            <h3>Please add a number between 1 and 5.</h3>
-            <p>1 being "not well.." and 5 being "Feel excellent!"</p>
+            <div className='changeFont'>
+                <h2>How well are you being supported?</h2>
+                <h3>Please add a number between 1 and 5.</h3>
+                <p>1 being "not well.." and 5 being "Feel excellent!"</p>
+            </div>
             <form onSubmit={handleSubmit}>
                 <div>
                     <input

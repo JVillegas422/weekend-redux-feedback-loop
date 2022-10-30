@@ -16,8 +16,10 @@ function Comments() {
     return (
         <>
             <Header />
-            <h2>Any comments you want to leave?</h2>
-            <h4>Comments</h4>
+            <div className='changeFont'>
+                <h2>Any comments you want to leave?</h2>
+                <h4>Comments</h4>
+            </div>
             <form onSubmit={handleSubmit}>
                 <div>
                     <input

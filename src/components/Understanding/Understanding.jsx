@@ -24,9 +24,11 @@ function Understanding() {
     return (
         <>
             <Header />
-            <h2>How well do you understand the content?</h2>
-            <h3>Please add a number between 1 and 5.</h3>
-            <p>1 being "not well.." and 5 being "Feel excellent!"</p>
+            <div className='changeFont'>
+                <h2>How well do you understand the content?</h2>
+                <h3>Please add a number between 1 and 5.</h3>
+                <p>1 being "not well.." and 5 being "Feel excellent!"</p>
+            </div>
             <form onSubmit={handleSubmit}>
                 <div>
                     <input
@@ -39,7 +41,17 @@ function Understanding() {
                         type="number"
                         required
                     />
-                    <button>Next Page</button>
+                    <div>
+                        <button
+                            className='btn-neon'
+                        >
+                            Next
+                            <svg height="30" width="100">
+                                <polyline points="0,0 100,0 100,30 0,30 0,00">
+                                </polyline>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
             </form>
