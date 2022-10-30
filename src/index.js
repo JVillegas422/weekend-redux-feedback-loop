@@ -14,7 +14,7 @@ const feedbackReducer = (
     state = { 
         feeling: 0,
         understanding: 0,
-        supported: 0,
+        support: 0,
         comments: ""
     }, 
     action) => {
@@ -23,14 +23,21 @@ const feedbackReducer = (
             return {...state, feeling: action.payload };
         case 'SET_UNDERSTANDING':
             return {...state, understanding: action.payload };
-        case 'SET_SUPPORTED':
-            return {...state, supported: action.payload };
+        case 'SET_SUPPORT':
+            return {...state, support: action.payload };
         case 'SET_COMMENTS':
             return {...state, comments: action.payload };
+        case 'SET_CLEAR':
+            return {
+                feeling: "",
+                understanding: "",
+                support: "",
+                comments: ""
+            };
         default:
             return state;
     }
-}
+};
 
 
 // Redux Store
