@@ -12,7 +12,7 @@ function Supported() {
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
-        if (feedback.supported >= 0 && feedback.supported <= 5) {
+        if (feedback.support >= 0 && feedback.support <= 5) {
             // useHistory is a hook to send to next page
             history.push('/4');
         }
@@ -32,7 +32,7 @@ function Supported() {
                     <input
                         onChange={(evt) =>
                             dispatch({
-                                type: 'SET_SUPPORTED',
+                                type: 'SET_SUPPORT',
                                 payload: evt.target.value,
                             })
                         }
