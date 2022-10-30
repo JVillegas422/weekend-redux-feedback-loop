@@ -9,7 +9,8 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
-// Reducer for user input data
+// Reducer for object data to be stored
+// on each page
 const feedbackReducer = (
     state = { 
         feeling: 0,

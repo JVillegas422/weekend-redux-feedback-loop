@@ -32,7 +32,7 @@ feedbackRouter.post('/', (req, res) => {
       });
 });
 
-// GET routes to load data
+// Will need this for stretch goals
 // feedbackRouter.get('/', (req, res) => {
 //     const sqlQuery = `
 //         SELECT * FROM "feedback"
