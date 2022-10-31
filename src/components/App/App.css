@@ -61,7 +61,15 @@ h4 {
 
 .App-title {
   color: white;
-  opacity: .4;
+  opacity: .2;
+  font-size: 85px;
+  font-family: 'Island Moments', cursive;
+  display: inline;
+}
+
+.App-main-title {
+  color: white;
+  opacity: .8;
   font-size: 85px;
   font-family: 'Island Moments', cursive;
   display: inline;
